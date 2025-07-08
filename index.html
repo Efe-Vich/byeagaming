@@ -198,20 +198,18 @@
                 </div>
               </div>
 
-              <!-- Modal HTML -->
-              <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
-                <div style="background:#222; color:#fff; padding:20px; border-radius:12px; max-width:400px; text-align:center; position:relative;">
-                  <h2 id="modal-title"></h2>
-                  <p id="modal-text"></p>
-                  <p style="font-family: monospace; font-weight:bold; background:#333; padding:10px; border-radius:8px; user-select: all;">
-                    Papara IBAN: TR840082900009492051810249
-                  </p>
-                  <p><strong>Alıcı Adı:</strong> Mesim Efe Selçuk</p>
-                  <p>Ödeme yaptıktan sonra Dekontu Kaydedip Discord sunucumuza gelin ve ticket açın.</p>
-                  <a href="https://discord.gg/byeagaming" target="_blank" style="display:inline-block; background:#5865F2; padding:10px 25px; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:10px;">Discord Sunucusuna Git</a>
-                  <button onclick="kapatModal()" style="position:absolute; top:10px; right:15px; background:none; border:none; color:#fff; font-size:22px; cursor:pointer;">&times;</button>
-                </div>
-              </div>
+              <!-- Modal -->
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Kapat" onclick="kapatModal()">&times;</button>
+      <h2 id="modal-title">Yetki Satın Al</h2>
+      <p id="modal-text">Ödeme talimatları burada gösterilecek.</p>
+      <p class="iban">Papara IBAN: TR840082900009492051810249</p>
+      <p><strong>Alıcı Adı:</strong> Mesim Efe Selçuk</p>
+      <p>Ödeme yaptıktan sonra dekont ile Discord sunucumuza gelin ve ticket açın.</p>
+      <a href="https://discord.gg/byeagaming" target="_blank" rel="noopener" class="discord-link">Discord Sunucusuna Git</a>
+    </div>
+  </div>
 
                 <script>
                     function satinal(yetki, fiyat) {
