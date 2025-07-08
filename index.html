@@ -213,12 +213,14 @@
                 </div>
               </div>
 
-              <script>
-                function satinal(yetki, fiyat) {
-                  document.getElementById('modal-title').textContent = yetki + ' Satın al';
-                  document.getElementById('modal-text').textContent = `${fiyat}₺ tutarındaki satın alma işlemi için aşağıdaki IBAN'a ödeme yapınız:`;
-                  document.getElementById('modal').style.display = 'flex';
-                }
+                <script>
+                    function satinal(yetki, fiyat) {
+                    const title = document.getElementById('modal-title');
+                    const text = document.getElementById('modal-text');
+                     title.textContent = yetki + ' Satın Al';
+                     text.textContent = fiyat + '₺ tutarındaki satın alma işlemi için aşağıdaki IBAN\'a ödeme yapınız:';
+                    document.getElementById('modal').style.display = 'flex';
+    }
                 function kapatModal() {
                   document.getElementById('modal').style.display = 'none';
                 }
